@@ -1,0 +1,25 @@
+.form{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding: 2rem 1rem;
+	border-radius: $border-radius;
+	&-home{
+		background: $white;
+	}
+	&-input,
+	input{
+		padding: 1rem;
+		border-radius: $border-radius;
+		background: $input-bg;
+		border: 1px solid transparent;
+		margin-bottom: 1rem;
+		font-size: 1.125rem;
+		&[placeholder]{
+			font-size: 1.125rem;
+		}
+		&:focus{
+			border: 1px solid $blue;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.2;
+	font-family: $default-font;
+	overflow-x: hidden;
+	height: 100%;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+ul,li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+h1{
+	font-size: 3.125rem;
+	font-weight: bold;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+.wrap {
+	min-height: 100%;
+	background: $white;
+	&-home{
+		background: #65c9f3 url("../img/home-bg.jpg") no-repeat center bottom;
+		background-size: cover;
+	}
+}
+main {
+	padding-bottom: $footer-height;
+	/*footer heifght*/
+}
+b, strong {
+	font-weight: bold;
+}
+
+
+@import "header";
+@import "logo";
+@import "buttons";
+@import "content";
+@import "form";
+@import "footer";
+@import "media"; // Always at the end

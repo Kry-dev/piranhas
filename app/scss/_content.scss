@@ -1,0 +1,11 @@
+.content {
+	&-home{
+		h1{color: $white}
+	}
+	.home-left{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}

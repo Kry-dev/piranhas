@@ -1,0 +1,27 @@
+$default-font: "Nunito", sans-serif;
+$accent: orange;
+$white: #fff;
+$blue: #04a0d9;
+$blue-dark: #133156;
+$green: #66c6b6;
+$yellow: #f2cf3c;
+$grey-dark: #3e4449;
+$grey: #6e7173;
+$text: $grey;
+$text-white: #fff;
+
+$header-height: 90px;
+$footer-height: 60px;
+
+$border-color: #dcdcdc;
+$border-radius: 3px;
+
+$input-bg: #f0f6f7;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;
