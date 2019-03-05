@@ -1,5 +1,6 @@
 .content {
 	&-home{
+		padding-top: 2rem;
 		h1{color: $white}
 	}
 	.home-left{
@@ -7,5 +8,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+	.home-right{
+		display: flex;
+		align-items: flex-end;
+		img.img-responsive{
+			display: flex;
+			margin-top:auto;
+		}
 	}
 }

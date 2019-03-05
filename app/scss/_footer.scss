@@ -4,11 +4,19 @@
 	margin-top: -$footer-height;
 	border-top: 1px solid $border-color;
 	font-size: 1rem;
+	@include media-breakpoint-down(xs) {
+		min-height:$footer-height;
+		height: auto;
+		padding: 2rem 0;
+	}
 	&-container{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		@include media-breakpoint-down(xs) {
+			flex-direction: column-reverse;
+		}
 	}
 	&-nav{
 		display: flex;
@@ -18,6 +26,15 @@
 			&:before{
 				content: '|';
 				margin-right: 1rem;
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+			li+li{
+				margin: 1rem auto;
+				&:before{
+					display: none;
+				}
 			}
 		}
 	}
@@ -33,5 +50,9 @@
 		a{
 			color: white;
 		}
+		@include media-breakpoint-down(xs) {
+			background: $blue-light;
+		}
 	}
+
 }

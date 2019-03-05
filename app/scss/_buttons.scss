@@ -17,6 +17,9 @@
 	}
 	&-sm{
 		font-size: 0.75rem;
+		@include media-breakpoint-down(md){
+			padding: 10px 15px;
+		}
 	}
 	&-lg{
 		font-size: 1rem;
@@ -40,4 +43,5 @@
 			border: 1px solid $blue;
 		}
 	}
+
 }
