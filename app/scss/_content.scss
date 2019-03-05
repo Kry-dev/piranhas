@@ -1,8 +1,14 @@
 .content {
+	padding-top: 2rem;
+	h1{
+		padding: 0 1rem;
+		color: $text;
+	}
 	&-home{
 		padding-top: 2rem;
 		h1{color: $white}
 	}
+
 	.home-left{
 		display: flex;
 		flex-direction: column;

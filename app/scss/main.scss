@@ -74,6 +74,11 @@ h1{
 		background: #65c9f3 url("../img/home-bg.jpg") no-repeat center bottom;
 		background-size: cover;
 	}
+	&-login{
+		.logo{
+			padding: 0 1rem;
+		}
+	}
 }
 main {
 	padding-bottom: $footer-height;

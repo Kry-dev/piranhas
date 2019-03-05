@@ -1,7 +1,6 @@
 .form{
-	display: flex;
+	display: block;
 	width: 100%;
-	flex-direction: column;
 	padding: 2rem 1rem;
 	border-radius: $border-radius;
 	margin-bottom: 1rem;
@@ -10,6 +9,8 @@
 	}
 	&-input,
 	input{
+		display: block;
+		width: 100%;
 		padding: 1rem;
 		border-radius: $border-radius;
 		background: $input-bg;

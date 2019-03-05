@@ -9,6 +9,9 @@
 	line-height: 1;
 	border: 1px solid transparent;
 	border-radius: $border-radius;
+	margin-bottom: 1rem;
+	display: inline-block;
+	text-align: center;
 	&:hover,
 	&:focus{
 		outline: none;
@@ -23,6 +26,7 @@
 	}
 	&-lg{
 		font-size: 1rem;
+		padding: 1rem 2rem;
 	}
 	&-white{
 		background: $white;
