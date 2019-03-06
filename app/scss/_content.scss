@@ -8,7 +8,9 @@
 		padding-top: 2rem;
 		h1{color: $white}
 	}
-
+	&-map{
+		padding-top: 0;
+	}
 	.home-left{
 		display: flex;
 		flex-direction: column;

@@ -1,5 +1,7 @@
+//default font
 $default-font: "Nunito", sans-serif;
-$accent: orange;
+
+//default colors
 $white: #fff;
 $blue-light: #83d1f5;
 $blue: #04a0d9;
@@ -10,14 +12,23 @@ $grey-dark: #3e4449;
 $grey: #6e7173;
 $text: $grey;
 $text-white: #fff;
+$accent: $yellow;
 
-$header-height: 90px;
+//social colors
+$facebook-color: #4c65a8;
+$twitter-color: #41a1f6;
+$linkedin-color: #0077b7;
+
+
+$header-height: 75px;
 $footer-height: 60px;
 
 $border-color: #dcdcdc;
 $border-radius: 3px;
 
 $input-bg: #f0f6f7;
+
+$box-shadow: 0 0 5px 2px rgba(67,67,67,0.2);
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
 $grid-gutter-width: 30px;
@@ -26,3 +37,6 @@ $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
 
 $gutter: $grid-gutter-width;
+
+// Font Awesome custom path
+$fa-font-path: "../fonts/FontAwesome/";

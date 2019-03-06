@@ -1,0 +1,30 @@
+.social{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	p{
+		margin-bottom: 0;
+		margin-right: 1rem;
+	}
+	&-list{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		li+li{
+			margin-left: 1rem;
+		}
+	}
+	.fa{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 27px;
+		height: 27px;
+		text-align: center;
+		font-size: 12px;
+		border-radius: 50%;
+		color: $white;
+		background: $grey;
+	}
+}

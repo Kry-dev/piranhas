@@ -1,0 +1,155 @@
+.places{
+	margin-top: -2rem;
+	&-card{
+		border-radius: $border-radius;
+		background: $white;
+		padding: 2rem 1rem 0;
+		box-shadow: $box-shadow;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	&-card__header{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	&-card__body{
+		display: flex;
+		width: 100%;
+	}
+	&-tabs{
+		display: flex;
+		flex-direction: row;
+		border-radius: 2rem;
+		background: $input-bg;
+		padding: 1rem;
+		margin-bottom: 1rem;
+		li+li{
+			margin-left: 1rem;
+			position: relative;
+			&:before{
+				display: block;
+				content: "";
+				width: 1px;
+				height: 2rem;
+				position: absolute;
+				background: #6e7173;
+				left: -.5rem;
+				top: -.4rem;
+				opacity: .4;
+			}
+		}
+		a{
+			padding: 1rem;
+			color: $text;
+			font-weight: normal;
+			font-size: 1rem;
+			&:hover,
+			&:focus{
+				color: $blue;
+				text-decoration: none;
+			}
+		}
+		li.active{
+			a{
+				color: $blue;
+			}
+		}
+	}
+	&-list{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	&-item{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		border-bottom: 1px solid $border-color ;
+		padding: .5rem 0;
+		flex: 1;
+		flex-wrap: nowrap;
+	}
+	&-item:last-child{
+		border-bottom: 0;
+	}
+	&-item-img{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 1rem;
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+	&-descr{
+		width: 100%;
+	}
+	&-item-close{
+		display: block;
+		color: $text;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		overflow: hidden;
+		&:hover,
+		&:focus{
+			cursor: pointer;
+			text-decoration: none;
+			&:before,
+			&:after{ background: $blue;}
+		}
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -1px;
+			width: 24px;
+			height: 2px;
+			background: $text;
+		}
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+	}
+	&-item-remove {
+		display: block;
+		color: $text;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		overflow: hidden;
+		&:before{
+			position: absolute;
+			content: "\f014";
+			font-family: FontAwesome;
+			font-size: 25px;
+		}
+		&:hover,
+		&:focus{
+			color: $blue;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+	&-town {
+		font-weight: bold;
+		color: $grey-dark;
+		font-size: 1.3125rem;
+	}
+	&-country{
+		font-size: 1rem;
+		margin-bottom: 0;
+	}
+}
