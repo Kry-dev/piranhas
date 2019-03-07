@@ -4,6 +4,10 @@
 	&-title{
 		margin-bottom: 0;
 		font-size: 2.125rem;
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 1rem;
+			color: $grey-dark;
+		}
 	}
 	&-card{
 		border-radius: $border-radius;
@@ -19,6 +23,10 @@
 			.places-title{
 				color: $white;
 			}
+			.btn{
+				display: inline-block;
+				width: fit-content;
+			}
 		}
 		&__blue-l{
 			color: $white;
@@ -26,12 +34,17 @@
 			.places-title{
 				color: $white;
 			}
+			.btn{
+				display: inline-block;
+				width: fit-content;
+			}
 		}
 		&__map{
 			background-image: url("../img/map-icon.png");
 			background-repeat: no-repeat;
 			background-position: bottom 1rem right 1rem;
 			background-size: inherit;
+			padding-bottom: 6rem;
 		}
 	}
 	&-card__header{
@@ -40,6 +53,9 @@
 		flex-direction: row;
 		justify-content: space-between;
 		margin-bottom: 1rem;
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+		}
 	}
 	&-card__body{
 		display: flex;
@@ -91,6 +107,11 @@
 			a{
 				color: $blue;
 			}
+		}
+		@include media-breakpoint-down(xs) {
+			margin: 0 auto 1rem;
+			width: 100%;
+			justify-content: center;
 		}
 	}
 	&-list{
@@ -191,6 +212,20 @@
 		flex-wrap: nowrap;
 		.places-card{
 			width: 100%;
+		}
+		// ≥768px
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+			box-shadow: none;
+			.places-card{
+				margin-bottom: 2rem;
+				box-shadow: $box-shadow;
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			.places-card .btn{
+				width: 100%;
+			}
 		}
 	}
 }
