@@ -2,10 +2,7 @@
 	padding-top: 2rem;
 	h1{
 		padding: 0 1rem;
-		color: $text;
-		@include media-breakpoint-down(xs) {
-			color: $grey-dark;
-		}
+		color: $grey-dark;
 	}
 	&-home{
 		padding-top: 2rem;

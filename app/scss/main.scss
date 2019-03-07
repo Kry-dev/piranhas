@@ -95,6 +95,11 @@ h1{
 	border-left-top-radius: 0 !important;
 	border-left-bottom-radius: 0 !important;
 }
+.bg-green{background: $green;}
+.bg-yellow{background: $yellow;}
+.bg-blue{background: $blue;}
+.bg-blue-light{background: $blue-light;}
+.bg-blue-dark{background: $blue-dark;}
 main {
 	padding-bottom: $footer-height;
 	/*footer heifght*/
@@ -114,5 +119,6 @@ b, strong {
 @import "progress";
 @import "form";
 @import "socials";
+@import "myroutes";
 @import "footer";
 @import "media"; // Always at the end
