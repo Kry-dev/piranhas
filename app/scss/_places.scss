@@ -1,24 +1,58 @@
 .places{
 	margin-top: -2rem;
+	margin-bottom: 2rem;
+	&-title{
+		margin-bottom: 0;
+		font-size: 2.125rem;
+	}
 	&-card{
 		border-radius: $border-radius;
-		background: $white;
-		padding: 2rem 1rem 0;
-		box-shadow: $box-shadow;
+		background-color: $white;
+		padding: 2rem 1rem 1rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: flex-start;
+		&__blue{
+			background-color: $blue;
+			color: $white;
+			.places-title{
+				color: $white;
+			}
+		}
+		&__blue-l{
+			color: $white;
+			background-color: $blue-light;
+			.places-title{
+				color: $white;
+			}
+		}
+		&__map{
+			background-image: url("../img/map-icon.png");
+			background-repeat: no-repeat;
+			background-position: bottom 1rem right 1rem;
+			background-size: inherit;
+		}
 	}
 	&-card__header{
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		margin-bottom: 1rem;
 	}
 	&-card__body{
 		display: flex;
 		width: 100%;
+		min-height: 3rem;
+		flex-direction: column;
+		.btn{
+			display: inline-block;
+			width: fit-content;
+		}
+	}
+	&-card-descr{
+		font-size: 1.25rem;
 	}
 	&-tabs{
 		display: flex;
@@ -151,5 +185,12 @@
 	&-country{
 		font-size: 1rem;
 		margin-bottom: 0;
+	}
+	.row-cards{
+		flex-direction: row;
+		flex-wrap: nowrap;
+		.places-card{
+			width: 100%;
+		}
 	}
 }

@@ -1,0 +1,62 @@
+.progress {
+	width: 100%;
+	margin: 0 auto 2rem;
+	position: relative;
+	&:before{
+		content: "";
+		position: absolute;
+		display: block;
+		background: $white;
+		height: 15px;
+		width: 100%;
+		left: 0;
+		top: 0;
+		border-radius: 1rem	;
+		z-index: 4;
+	}
+	&-bar{
+		position: relative;
+		background: $blue;
+		height: 15px;
+		padding: 7px 10px;
+		background-size: 50px 50px;
+		border-radius: 1rem	;
+		z-index: 5;
+	}
+	&-text{
+		float: right;
+		color: $white;
+		font-size: 1rem;
+		margin-top: -2rem;
+	}
+}
+
+@-webkit-keyframes animasi {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 50px 50px
+	}
+}
+
+@-moz-keyframes animasi {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 50px 50px
+	}
+}
+
+@-o-keyframes animasi {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 50px 50px
+	}
+}

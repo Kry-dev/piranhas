@@ -86,6 +86,15 @@ h1{
 .bg-twitter  {background-color: $twitter-color !important;  }
 .bg-linkedin {background-color: $linkedin-color !important; }
 
+
+.b-shadow{
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+}
+.border-radius-l-0{
+	border-left-top-radius: 0 !important;
+	border-left-bottom-radius: 0 !important;
+}
 main {
 	padding-bottom: $footer-height;
 	/*footer heifght*/
@@ -101,6 +110,8 @@ b, strong {
 @import "content";
 @import "map";
 @import "places";
+@import "addnew";
+@import "progress";
 @import "form";
 @import "socials";
 @import "footer";

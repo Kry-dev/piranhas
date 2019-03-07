@@ -1,0 +1,14 @@
+.addnew-list{
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border-radius: $border-radius;
+	background: $input-bg;
+	width: 100%;
+	font-size: 1.125rem;
+	color: $text;
+	margin-bottom: 1rem;
+	li+li{
+		margin-top: 1rem;
+	}
+}
