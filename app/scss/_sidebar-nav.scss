@@ -1,0 +1,117 @@
+.burgermenu {
+	position: absolute;
+	top: 15px;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	transition: transform 250ms ease;
+	cursor: pointer;
+	z-index: 200;
+
+	span {
+		position: relative;
+		display: block;
+		width: 50%;
+		height: 2px;
+		background-color: $grey;
+		float: left;
+		transform-origin: center center;
+		transition: transform 250ms ease;
+		z-index: 200;
+
+		&:nth-of-type(1) {
+			transform: translateY(-5px);
+		}
+
+		&:nth-of-type(3) {
+			transform: translateY(5px);
+		}
+	}
+}
+
+#burgermenu {
+	display: none;
+
+	&:checked ~ .burgermenu {
+		background-color: transparent;
+		transform: rotate(360deg);
+		transition: transform 250ms ease;
+
+		span {
+			background-color: white;
+			transition: transform 250ms ease;
+			&:nth-of-type(1) {  transform: translateY(1px) rotate(45deg);  }
+			&:nth-of-type(2) {  display: none;  }
+			&:nth-of-type(3) {  transform: translateY(-1px) rotate(-45deg);  }
+		}
+	}
+
+	&:checked ~ .sidebar-nav {
+		right: -75%;
+		transition: right 500ms ease;
+		@include media-breakpoint-down(md) {
+			right: -50%;
+		}
+	}
+
+	&:checked ~ main {
+		transform: translateX(250px);
+		transition: transform 500ms ease;
+	}
+}
+
+.sidebar-nav {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: $blue;
+	transition: left 500ms ease;
+	z-index: 10;
+
+
+	ul {
+		display: flex;
+		width: 300px;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		list-style-type: none;
+		padding: 0 2rem;
+
+		li {
+			position: relative;
+			display: block;
+			a {
+				position: relative;
+				display: block;
+				margin: 0;
+				padding: 15px 20px;
+				color: white;
+				font-size: 1rem;
+				text-decoration: none;
+				text-align: center;
+
+				&:hover {
+					text-decoration: underline;
+				}
+				@include media-breakpoint-down(sm) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
