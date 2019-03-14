@@ -19,9 +19,30 @@
 		font-size: 1.125rem;
 		&[placeholder]{
 			font-size: 1.125rem;
+			color: $text;
 		}
 		&:focus{
 			border: 1px solid $blue;
+		}
+	}
+	&-textarea,
+	textarea{
+		display: block;
+		width: 100%;
+		padding: 1rem;
+		color: $text;
+		border-radius: $border-radius;
+		background: $input-bg;
+		border: 1px solid transparent;
+		margin-bottom: 1rem;
+		font-size: 1.125rem;
+		line-height: 1.2;
+		resize: none;
+		text-align: left;
+	}
+	@include media-breakpoint-down(sm){
+		.btn{
+			width: 100%;
 		}
 	}
 }

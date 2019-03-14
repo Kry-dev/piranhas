@@ -2,14 +2,6 @@
 @import "fonts";
 @import "libs";
 
-::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
 html,
 body {
 	height: 100%;
