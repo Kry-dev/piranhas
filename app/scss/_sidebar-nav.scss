@@ -1,7 +1,7 @@
 .burgermenu {
 	position: absolute;
 	top: 15px;
-	right: 0;
+	right: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -53,16 +53,20 @@
 	}
 
 	&:checked ~ .sidebar-nav {
-		right: -75%;
-		transition: right 500ms ease;
-		@include media-breakpoint-down(md) {
-			right: -50%;
-		}
+		right: 0;
+		-webkit-transition: 0.6s;
+		-moz-transition: 0.6s;
+		transition: 0.6s;
+
 	}
 
+	&:checked ~ header ,
 	&:checked ~ main {
-		transform: translateX(250px);
-		transition: transform 500ms ease;
+		transform: translateX(-320px);
+		-webkit-transition: 0.6s;
+		-moz-transition: 0.6s;
+		transition: 0.6s;
+
 	}
 }
 
@@ -73,19 +77,20 @@
 	flex-direction: column;
 	position: fixed;
 	top: 0;
-	right: -100%;
-	width: 100%;
+	right: -320px;
+	width: 320px;
 	height: 100vh;
 	margin: 0;
 	padding: 0;
 	background-color: $blue;
-	transition: left 500ms ease;
 	z-index: 10;
-
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	transition: 0.6s;
 
 	ul {
 		display: flex;
-		width: 300px;
+		width: 100%;
 		flex-direction: column;
 		justify-content: center;
 		position: relative;
@@ -117,6 +122,9 @@
 				}
 				@include media-breakpoint-down(sm) {
 					text-align: left;
+					&:hover:after{
+						left: 15px;
+					}
 				}
 			}
 		}
