@@ -135,6 +135,7 @@
 		padding: .75rem 0;
 		flex: 1;
 		flex-wrap: nowrap;
+		position: relative;
 	}
 	&-item:last-child{
 		border-bottom: 0;
@@ -149,6 +150,23 @@
 			display: block;
 			width: 100%;
 		}
+	}
+	.badge{
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		background: #0061af;
+		border: 1px solid #fff;
+		left: 27px;
+		top: 3px;
+		font-size: 10px;
+		font-weight: bold;
+		line-height: 17px;
+		color: white;
+		text-align: center;
+		padding: 4px;
 	}
 	&-descr{
 		width: 100%;
