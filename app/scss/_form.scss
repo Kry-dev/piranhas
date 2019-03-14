@@ -24,6 +24,9 @@
 		&::-moz-placeholder          {color:#a3a6a8;}/* Firefox 19+ */
 		&:-moz-placeholder           {color:#a3a6a8;}/* Firefox 18- */
 		&:-ms-input-placeholder      {color:#a3a6a8;}
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
 	}
 	&-textarea,
 	textarea{
@@ -39,12 +42,18 @@
 		line-height: 1.2;
 		resize: none;
 		text-align: left;
-
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+		}
 	}
 	.btn{
 		padding: 18px 36px;
 		font-size: 1rem;
 		font-family: "Nunito Bold";
+		@include media-breakpoint-down(xs) {
+			font-size: 1rem;
+			padding: 18px 10px;
+		}
 	}
 	@include media-breakpoint-down(sm){
 		.btn{

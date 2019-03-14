@@ -30,13 +30,19 @@
 		}
 		&__blue-l{
 			color: $white;
-			background-color: $blue-light;
+			background-color: #57c3f1;
 			.places-title{
 				color: $white;
 			}
 			.btn{
 				display: inline-block;
 				width: fit-content;
+				color: $blue;
+				padding: 20px 40px;
+				&:hover,
+				&:focus{
+					color: $white;
+				}
 			}
 		}
 		&__map{
@@ -69,6 +75,7 @@
 	}
 	&-card-descr{
 		font-size: 1.25rem;
+		font-weight: 1.875rem;
 	}
 	&-tabs{
 		display: flex;
@@ -208,8 +215,13 @@
 		margin-bottom: 0;
 	}
 	.row-cards{
+		width: 100%;
+		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
+		align-self: center;
+		margin-right: 0;
+		margin-left: 0;
 		.places-card{
 			width: 100%;
 		}
