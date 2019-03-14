@@ -17,13 +17,22 @@
 		border: 1px solid transparent;
 		margin-bottom: 1rem;
 		font-size: 1.125rem;
+		line-height: 100%;
 		&:focus{
 			border: 1px solid $blue;
 		}
-		&::-webkit-input-placeholder {color:#a3a6a8;}
-		&::-moz-placeholder          {color:#a3a6a8;}/* Firefox 19+ */
-		&:-moz-placeholder           {color:#a3a6a8;}/* Firefox 18- */
-		&:-ms-input-placeholder      {color:#a3a6a8;}
+		&::-webkit-input-placeholder {
+			line-height: normal !important;
+			color:#a3a6a8;}
+		&::-moz-placeholder          {
+			line-height: normal !important;
+			color:#a3a6a8;}/* Firefox 19+ */
+		&:-moz-placeholder           {
+			line-height: normal !important;
+			color:#a3a6a8;}/* Firefox 18- */
+		&:-ms-input-placeholder      {
+			line-height: normal !important;
+			color:#a3a6a8;}
 		@include media-breakpoint-down(xs) {
 			font-size: 1rem;
 		}
