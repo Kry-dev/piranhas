@@ -35,7 +35,7 @@
 				color: $white;
 			}
 			.btn{
-				display: inline-block;
+				display: inline-table;
 				width: fit-content;
 				color: $blue;
 				padding: 20px 40px;
@@ -69,13 +69,17 @@
 		min-height: 3rem;
 		flex-direction: column;
 		.btn{
-			display: inline-block;
+			display: inline-table;
 			width: fit-content;
+			@include media-breakpoint-down(xs) {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 	&-card-descr{
 		font-size: 1.25rem;
-		font-weight: 1.875rem;
+		line-height: 1.875rem;
 	}
 	&-tabs{
 		display: flex;
