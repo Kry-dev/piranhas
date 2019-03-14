@@ -13,5 +13,7 @@ $(function() {
         $(this).addClass('active');
         $('.social').show();
     });
-
+    $('.form-textarea').on('focus',function () {
+        $(this).val('');
+    })
 });
