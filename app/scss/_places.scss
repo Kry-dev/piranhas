@@ -182,8 +182,24 @@
 		&:focus{
 			cursor: pointer;
 			text-decoration: none;
-			&:before,
-			&:after{ background: $blue;}
+			&:before{
+				width: 23px;
+				position: absolute;
+				height: 25px;
+				font-size: 25px;
+				left: 1px;
+				top: 0;
+				color: #04a0d9;
+				content: "\f014";
+				font-family: FontAwesome;
+				background: none;
+				-webkit-transform: rotate(0);
+				-ms-transform: rotate(0);
+				transform: rotate(0);
+			}
+			&:after{
+				display: none;
+			}
 		}
 		&:before,
 		&:after{
