@@ -261,7 +261,7 @@
 		margin-right: 0;
 		margin-left: 0;
 		.places-card{
-			width: 100%;
+			width: 50%;
 		}
 		// ≥768px
 		@include media-breakpoint-down(sm) {
@@ -270,6 +270,7 @@
 			.places-card{
 				margin-bottom: 2rem;
 				box-shadow: $box-shadow;
+				width: 100%;
 			}
 		}
 		@include media-breakpoint-down(xs) {
