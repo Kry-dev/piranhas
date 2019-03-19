@@ -55,6 +55,14 @@
 			font-size: 1rem;
 		}
 	}
+	&-input,
+	input,
+	input::placeholder,
+	&-textarea,
+	textarea,
+	textarea::placeholder{
+		color: $grey;
+	}
 	.btn{
 		padding: 18px 36px;
 		font-size: 1rem;

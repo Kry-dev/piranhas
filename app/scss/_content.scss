@@ -16,9 +16,26 @@
 	}
 	&-home{
 		padding-top: 2rem;
+		margin-bottom: 3rem;
 		h1{
 			color: $white;
 			margin-bottom: 2rem;
+		}
+		.form-home{
+			position: relative;
+			z-index: 1;
+			margin-left: 2rem;
+			@include media-breakpoint-down(sm){
+				margin: 0 auto;
+				width: 510px;
+			}
+			@include media-breakpoint-down(xs){
+				width: 90%;
+				padding-left:1rem;
+				padding-right:1rem;
+				margin-left: 1rem;
+				margin-right: 1rem;
+			}
 		}
 	}
 	&-map{
@@ -42,6 +59,7 @@
 		img.img-responsive{
 			display: flex;
 			margin-top:auto;
+			width: 100%;
 			max-width: 600px;
 		}
 		@include media-breakpoint-down(sm){
