@@ -1,7 +1,7 @@
 .burgermenu {
-	position: absolute;
-	top: 15px;
-	right: 15px;
+	//position: absolute;
+	//top: 15px;
+	//right: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -13,6 +13,7 @@
 	transition: transform 250ms ease;
 	cursor: pointer;
 	z-index: 200;
+	margin-bottom: 0;
 
 	span {
 		position: relative;
@@ -95,37 +96,23 @@
 		justify-content: center;
 		position: relative;
 		list-style-type: none;
-
+		padding-left: 80px;
 		li {
 			position: relative;
 			display: block;
+			margin-bottom: 1rem;
 			a {
 				position: relative;
-				display: block;
+				text-align: center;
 				margin: 0;
-				padding: 15px 20px;
 				color: white;
 				text-decoration: none;
-				text-align: center;
 				font-family: "Nunito";
 				font-weight: 700;
 				font-size: 1.375rem;
 				line-height: 3.25rem;
-				&:hover:after {
-					content: "";
-					display: block;
-					bottom: 0;
-					left: 20%;
-					width: 60%;
-					height: 1px;
-					background: $white;
-					position: absolute;
-				}
-				@include media-breakpoint-down(sm) {
-					text-align: left;
-					&:hover:after{
-						left: 15px;
-					}
+				&:hover{
+					border-bottom: 1px solid white ;
 				}
 			}
 		}
