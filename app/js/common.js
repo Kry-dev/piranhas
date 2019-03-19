@@ -13,4 +13,7 @@ $(function() {
         $(this).addClass('active');
         $('.social').show();
     });
+    $('.places-item-close').on('click', function (e) {
+        e.preventDefault();
+    })
 });
