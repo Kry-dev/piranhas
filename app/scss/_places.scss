@@ -174,9 +174,13 @@
 		right: 0;
 		top: 1.5rem;
 		overflow: hidden;
-		&:focus{
+		background: transparent;
+		border: none;
+
+		&.active{
 			cursor: pointer;
 			text-decoration: none;
+			outline: none;
 			&:before{
 				width: 23px;
 				position: absolute;
@@ -184,7 +188,8 @@
 				font-size: 25px;
 				left: 1px;
 				top: 0;
-				color: #04a0d9;
+				color: $text;
+				background: transparent;
 				content: "\f014";
 				font-family: FontAwesome;
 				background: none;
@@ -194,6 +199,10 @@
 			}
 			&:after{
 				display: none;
+			}
+			&:hover:before{
+				color: #04a0d9;
+				background: transparent;
 			}
 		}
 		&:before,
@@ -207,11 +216,19 @@
 			height: 2px;
 			background: $text;
 		}
-		&:before{
-			transform: rotate(45deg);
+		&:hover{
+			cursor: pointer;
+			background: transparent;
+			color: #04a0d9;
+			&:before,
+			&:after{
+				background: #04a0d9;
+			}
 		}
-		&:after{
-			transform: rotate(-45deg);
+		&:before{transform: rotate(45deg);  }
+		&:after{transform: rotate(-45deg);  }
+		&:focus{
+			outline: none;
 		}
 	}
 	&-item-remove {
