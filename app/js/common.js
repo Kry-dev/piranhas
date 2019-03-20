@@ -17,4 +17,7 @@ $(function() {
     $('.places-item-close').click(function(){
         $(this).toggleClass("active");
     });
+    $('.burgermenu').on('click', function () {
+        $('body').toggleClass('toggled');
+    });
 });

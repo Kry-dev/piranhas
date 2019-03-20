@@ -1,7 +1,8 @@
 .logo{
-	display: flex;
+	display: inline-block;
 	width: 100%;
 	max-width: 170px;
+	float: left;
 	img{
 		width: 100%;
 	}

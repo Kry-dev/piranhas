@@ -21,6 +21,7 @@
 	&-nav{
 		display: flex;
 		flex-direction: row;
+		li{text-align: center;}
 		li+li{
 			margin-left: 1rem;
 			&:before{
