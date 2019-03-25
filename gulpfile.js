@@ -1,5 +1,5 @@
-var syntax        = 'scss', // Syntax: sass or scss;
-	gulpversion   = '4'; // Gulp version: 3 or 4
+var syntax        = 'scss',
+	gulpversion   = '4';
 
 var gulp          = require('gulp'),
 	gutil         = require('gulp-util' ),
@@ -29,7 +29,7 @@ gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
-	// .pipe(autoprefixer(['last 4 version', 'safari 5', 'ie 10', 'ie 11', 'opera 12.1', 'ios 6', 'android 4']))
+	.pipe(autoprefixer(['last 4 version', 'safari 5', 'ie 10', 'ie 11', 'opera 12.1', 'ios 6', 'android 4']))
 	// .pipe(autoprefixer(['last 4 version']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
@@ -66,15 +66,6 @@ gulp.task('rsync', function() {
 		compress: true
 	}))
 });
-
-if (gulpversion == 3) {
-	gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
-		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-		gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-		gulp.watch('app/*.html', ['code'])
-	});
-	gulp.task('default', ['watch']);
-}
 
 if (gulpversion == 4) {
 	gulp.task('watch', function() {
